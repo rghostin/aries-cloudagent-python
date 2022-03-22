@@ -196,7 +196,6 @@ def format_did_info(info: DIDInfo):
 @querystring_schema(DIDListQueryStringSchema())
 @response_schema(DIDListSchema, 200, description="")
 async def wallet_did_list(request: web.BaseRequest):
-    print("############## TESTTTTTTT")
     """
     Request handler for searching wallet DIDs.
 

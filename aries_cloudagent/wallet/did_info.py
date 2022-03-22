@@ -8,17 +8,6 @@ from .key_type import KeyType
 KeyInfo = NamedTuple(
     "KeyInfo", [("verkey", str), ("metadata", dict), ("key_type", KeyType)]
 )
-# DIDInfo = NamedTuple(
-#     "DIDInfo",
-#     [
-#         ("did", str),
-#         ("verkey", str),
-#         ("privKey", str),
-#         ("metadata", dict),
-#         ("method", DIDMethod),
-#         ("key_type", KeyType),
-#     ],
-# )
 
 
 class DIDInfo(NamedTuple):
