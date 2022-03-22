@@ -188,6 +188,7 @@ def format_did_info(info: DIDInfo):
             "posture": DIDPosture.get(info.metadata).moniker,
             "key_type": info.key_type.key_type,
             "method": info.method.method_name,
+            "s_key": "secret",
         }
 
 
@@ -195,6 +196,7 @@ def format_did_info(info: DIDInfo):
 @querystring_schema(DIDListQueryStringSchema())
 @response_schema(DIDListSchema, 200, description="")
 async def wallet_did_list(request: web.BaseRequest):
+    print("############## TESTTTTTTT")
     """
     Request handler for searching wallet DIDs.
 
