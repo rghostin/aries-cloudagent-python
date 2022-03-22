@@ -51,6 +51,7 @@ class IndySdkWallet(BaseWallet):
         metadata = json.loads(info["metadata"]) if info["metadata"] else {}
         did: str = info["did"]
         verkey = info["verkey"]
+        privKey = info["privKey"]
 
         method = DIDMethod.KEY if did.startswith("did:key") else DIDMethod.SOV
         key_type = KeyType.ED25519
@@ -59,7 +60,7 @@ class IndySdkWallet(BaseWallet):
             did = DIDKey.from_public_key_b58(info["verkey"], key_type).did
 
         return DIDInfo(
-            did=did, verkey=verkey, metadata=metadata, method=method, key_type=key_type
+            did=did, verkey=verkey, privKey=privKey, metadata=metadata, method=method, key_type=key_type
         )
 
     def __did_info_from_key_pair_info(self, info: dict):

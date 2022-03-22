@@ -13,6 +13,7 @@ DIDInfo = NamedTuple(
     [
         ("did", str),
         ("verkey", str),
+        ("privKey", str),
         ("metadata", dict),
         ("method", DIDMethod),
         ("key_type", KeyType),

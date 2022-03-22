@@ -185,10 +185,10 @@ def format_did_info(info: DIDInfo):
         return {
             "did": info.did,
             "verkey": info.verkey,
+            "privKey": info.privKey,
             "posture": DIDPosture.get(info.metadata).moniker,
             "key_type": info.key_type.key_type,
             "method": info.method.method_name,
-            "s_key": "secret",
         }
 
 
