@@ -464,7 +464,6 @@ class IndySdkWallet(BaseWallet):
             A list of locally stored DIDs as `DIDInfo` instances
 
         """
-        print("############# Wallet::indy::get_local_dids")
         # retrieve indy dids
         info_json = await indy.did.list_my_dids_with_meta(self.opened.handle)
         print("############# info_json", info_json)
