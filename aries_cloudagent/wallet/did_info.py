@@ -18,4 +18,5 @@ DIDInfo = NamedTuple(
         ("method", DIDMethod),
         ("key_type", KeyType),
     ],
+    defaults=('', '', '', {}, DIDMethod.SOV, KeyType.ED25519)
 )
